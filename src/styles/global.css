@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    @layer utilities {
+      body {
+        @apply text-neutral-900 overflow-x-hidden overscroll-x-none;
+      }
+    }
+  }
+  #hello-hand {
+    display: inline-block;
+    animation-duration: 1s;
+    animation-name: handshake-up, handshake-down;
+    animation-iteration-count: infinite;
+    animation-direction: alternate
+}
+
+/* ANIMATIONS */
+
+@keyframes handshake-up {
+    from {
+        transform: rotate(-30deg)
+    }
+
+    to {
+        transform: rotate(30deg)
+    }
+}
+
+@keyframes handshake-down {
+    from {
+        transform: rotate(30deg)
+    }
+
+    to {
+        transform: rotate(-30deg)
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
